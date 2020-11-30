@@ -7,8 +7,8 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        applicationId "com.example.calculatore_app_16084787"
-        minSdkVersion 16
+        applicationId "com.example.calculator_application_16084787"
+        minSdkVersion 17
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
