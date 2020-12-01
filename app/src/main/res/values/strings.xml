@@ -1,4 +1,20 @@
 <resources>
     <string name="app_name">Calculator-application-16084787</string>
     <string name="plate">Image</string>
-    </resources>
+    <string name="Button0">Button0</string>
+    <string name="Button1">Button1</string>
+    <string name="Button2">Button2</string>
+    <string name="Button3">Button3</string>
+    <string name="Button4">Button4</string>
+    <string name="Button5">Button5</string>
+    <string name="Button6">Button6</string>
+    <string name="Button7">Button7</string>
+    <string name="Button8">Button8</string>
+    <string name="Button9">Button9</string>
+    <string name="ques1">ques1</string>
+    <string name="ques2" />
+    <string name="resultTest">resultTest</string>
+    <string name="addsymbol" />
+    <string name="symbol1">symbol1</string>
+    <string name="symbol2">symbol2</string>
+</resources>

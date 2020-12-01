@@ -61,6 +61,9 @@ public class MainActivity<numb1, numb2> extends AppCompatActivity {
         Random r2 = new Random();
         int numb2 = r2.nextInt(4);
 
+        String symbol1 = "+";
+        String symbol2 = "=";
+
 
         TextView myTextView;
 
@@ -68,21 +71,49 @@ public class MainActivity<numb1, numb2> extends AppCompatActivity {
           myTextView = (TextView)findViewById(R.id.ques1);
           myTextView.setText( String.valueOf(numb1) );
 
+         myTextView = (TextView)findViewById(R.id.symbol1);
+         myTextView.setText(symbol1);
+
           myTextView = (TextView)findViewById(R.id.ques2);
-          myTextView.setText( String.valueOf(numb2) );
+        myTextView.setText( String.valueOf(numb2) );
+
+
+         myTextView = (TextView)findViewById(R.id.symbol2);
+        myTextView.setText( symbol2 );
 
         // code for ques1 and ques2
     }
 
 
 //code for button
-    int button4, button5;
+    int button0, button1, button2, button3, button4, button5, button6, button7, button8, button9;
     TextView myTextView;
 
-    public void button5Click(View v){
+    public void button0Click(View v) {
         TextView output = findViewById(R.id.resultTest);
-        output.setText("5");
-        button5 = 5;
+        output.setText("0");
+        button0 = 0;
+        display();
+    }
+
+    public void button1Click(View v) {
+        TextView output = findViewById(R.id.resultTest);
+        output.setText("1");
+        button1 = 1;
+        display();
+    }
+
+    public void button2Click(View v) {
+        TextView output = findViewById(R.id.resultTest);
+        output.setText("2");
+        button2 = 2;
+        display();
+    }
+
+    public void button3Click(View v) {
+        TextView output = findViewById(R.id.resultTest);
+        output.setText("3");
+        button3 = 3;
         display();
     }
 
@@ -92,6 +123,43 @@ public class MainActivity<numb1, numb2> extends AppCompatActivity {
         button4 = 4;
         display();
     }
+
+    public void button5Click(View v){
+        TextView output = findViewById(R.id.resultTest);
+        output.setText("5");
+        button5 = 5;
+        display();
+    }
+
+    public void button6Click(View v) {
+        TextView output = findViewById(R.id.resultTest);
+        output.setText("6");
+        button6 = 6;
+        display();
+    }
+
+    public void button7Click(View v) {
+        TextView output = findViewById(R.id.resultTest);
+        output.setText("7");
+        button7 = 7;
+        display();
+    }
+
+    public void button8Click(View v) {
+        TextView output = findViewById(R.id.resultTest);
+        output.setText("8");
+        button8 = 8;
+        display();
+    }
+
+    public void button9Click(View v) {
+        TextView output = findViewById(R.id.resultTest);
+        output.setText("9");
+        button9 = 9;
+        display();
+    }
+
+
 
     //end code for button
 
