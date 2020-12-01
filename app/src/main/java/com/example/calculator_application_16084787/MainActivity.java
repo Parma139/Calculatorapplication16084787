@@ -3,12 +3,16 @@ package com.example.calculator_application_16084787;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;        //for View
 import android.widget.ImageView; // for linking the ImageView object
 import android.view.MotionEvent; //for touch and drag event
+import android.widget.Button;
+import android.widget.TextView;
 
 
-public class MainActivity extends AppCompatActivity {
+
+public class MainActivity<numb1, numb2> extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +49,69 @@ public class MainActivity extends AppCompatActivity {
         ImageView apple10 = (ImageView) findViewById(R.id.apple10);
         apple10.setOnTouchListener(handleTouch);
 
+
+
+
+        // code for number
+
+        int numb1 = 3;
+        int numb2 = 2;
+        TextView myTextView;
+        int check;
+
+       // load the question
+        myTextView = (TextView)findViewById(R.id.ques);
+        myTextView.setText( String.valueOf(numb1) + "  +  " + String.valueOf(numb2) + "  =  " );
+        // end for loading the question
+/**
+        int result = numb1 + numb2;
+        TextView output = findViewById(R.id.resultTest);
+        check = output.getText().length();
+         if (check == result){
+             myTextView = (TextView)findViewById(R.id.check);
+             myTextView.setText( "hey it is correct" );
+
+         }else
+          {
+              myTextView = (TextView)findViewById(R.id.check);
+              myTextView.setText( "answer is wrong" );
+         }
+
+****/
+
+        //code for number
     }
+
+
+//code for button
+    int button5;
+    public void button5Click(View v){
+        TextView output = findViewById(R.id.resultTest);
+        output.setText("5");
+        button5 = 5;
+
+        int numb1 = 2;
+        int numb2 = 3;
+        
+        int result = numb1 + numb2;
+       // TextView inuput = findViewById(R.id.resultTest);
+       // int check = inuput.getText().length();   //these two lines to find out how convert textview into string
+        TextView myTextView;
+        if (button5 == result){
+            myTextView = (TextView)findViewById(R.id.check);
+            myTextView.setText( "hey it is correct" + "check = " + button5  );
+
+        }else
+        {
+            myTextView = (TextView)findViewById(R.id.check);
+            myTextView.setText( "answer is wrong" );
+        }
+
+           }
+    // end code for button
+
+
+
 
     private View.OnTouchListener handleTouch = new View.OnTouchListener() {
         float dX, dY;
