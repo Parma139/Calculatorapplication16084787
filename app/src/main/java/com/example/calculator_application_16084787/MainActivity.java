@@ -3,12 +3,13 @@ package com.example.calculator_application_16084787;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;        //for View
 import android.widget.ImageView; // for linking the ImageView object
 import android.view.MotionEvent; //for touch and drag event
-import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+import java.util.Random;
+
 
 
 
@@ -54,65 +55,87 @@ public class MainActivity<numb1, numb2> extends AppCompatActivity {
 
         // code for number
 
-        int numb1 = 3;
-        int numb2 = 2;
+        Random r1 = new Random();
+        int numb1 = r1.nextInt(4);
+
+        Random r2 = new Random();
+        int numb2 = r2.nextInt(4);
+
+
         TextView myTextView;
-        int check;
 
-       // load the question
-        myTextView = (TextView)findViewById(R.id.ques);
-        myTextView.setText( String.valueOf(numb1) + "  +  " + String.valueOf(numb2) + "  =  " );
-        // end for loading the question
-/**
-        int result = numb1 + numb2;
-        TextView output = findViewById(R.id.resultTest);
-        check = output.getText().length();
-         if (check == result){
-             myTextView = (TextView)findViewById(R.id.check);
-             myTextView.setText( "hey it is correct" );
 
-         }else
-          {
-              myTextView = (TextView)findViewById(R.id.check);
-              myTextView.setText( "answer is wrong" );
-         }
+          myTextView = (TextView)findViewById(R.id.ques1);
+          myTextView.setText( String.valueOf(numb1) );
 
-****/
+          myTextView = (TextView)findViewById(R.id.ques2);
+          myTextView.setText( String.valueOf(numb2) );
 
-        //code for number
+        // code for ques1 and ques2
     }
 
 
 //code for button
-    int button5;
+    int button4, button5;
+    TextView myTextView;
+
     public void button5Click(View v){
         TextView output = findViewById(R.id.resultTest);
         output.setText("5");
         button5 = 5;
+        display();
+    }
 
-        int numb1 = 2;
-        int numb2 = 3;
-        
-        int result = numb1 + numb2;
-       // TextView inuput = findViewById(R.id.resultTest);
-       // int check = inuput.getText().length();   //these two lines to find out how convert textview into string
-        TextView myTextView;
-        if (button5 == result){
-            myTextView = (TextView)findViewById(R.id.check);
-            myTextView.setText( "hey it is correct" + "check = " + button5  );
+    public void button4Click(View v) {
+        TextView output = findViewById(R.id.resultTest);
+        output.setText("4");
+        button4 = 4;
+        display();
+    }
 
+    //end code for button
+
+    //function that check answer is right or wrong
+
+    public void display (){
+
+        String checkS;
+        int checkI;
+
+        String checkq1S;
+        int checkq1I;
+
+        String checkq2S;
+        int checkq2I;
+
+        int result = 0;
+        TextView outes = findViewById(R.id.resultTest);
+        checkS = outes.getText().toString();
+        checkI = Integer.parseInt(checkS);
+
+        TextView outq1 = findViewById(R.id.ques1);
+        checkq1S = outq1.getText().toString();
+        checkq1I = Integer.parseInt(checkq1S);
+
+
+        TextView outq2 = findViewById(R.id.ques2);
+        checkq2S = outq2.getText().toString();
+        checkq2I = Integer.parseInt(checkq2S);
+
+        result = checkq1I + checkq2I;
+
+        if (checkI == result){
+            Toast.makeText(this, "This is correct answer",Toast.LENGTH_SHORT).show();
         }else
         {
-            myTextView = (TextView)findViewById(R.id.check);
-            myTextView.setText( "answer is wrong" );
+            Toast.makeText(this, "This is wrong answer",Toast.LENGTH_SHORT).show();
         }
 
-           }
-    // end code for button
+    }
+    // end function that check answer is right or wrong
 
 
-
-
+    //function that check listen touch listener
     private View.OnTouchListener handleTouch = new View.OnTouchListener() {
         float dX, dY;
         @Override
@@ -136,6 +159,8 @@ public class MainActivity<numb1, numb2> extends AppCompatActivity {
             return true;
         }
     };
+
+    // end function that check listen touch listener
 
 
 }

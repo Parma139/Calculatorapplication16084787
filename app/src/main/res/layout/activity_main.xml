@@ -201,46 +201,58 @@
         android:layout_height="55dp"
         android:layout_marginStart="308dp"
         android:layout_marginTop="271dp"
-        android:layout_marginEnd="12dp"
+        android:layout_marginEnd="50dp"
         android:layout_marginBottom="230dp"
         android:text="?"
         android:textColor="#0A1273"
         android:textSize="36sp"
         app:layout_constraintBottom_toTopOf="@+id/plate"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/ques1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="217dp"
+        android:layout_marginEnd="340dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/ques"
-        android:layout_width="275dp"
-        android:layout_height="59dp"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="137dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="198dp"
-        android:text="TextView"
-        android:textColor="#120202"
-        android:textSize="36sp"
-        app:layout_constraintBottom_toTopOf="@+id/plate"
-        app:layout_constraintEnd_toStartOf="@+id/resultTest"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton5" />
-
-    <TextView
-        android:id="@+id/check"
+        android:id="@+id/ques2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="66dp"
-        android:layout_marginTop="118dp"
-        android:layout_marginEnd="258dp"
-        android:layout_marginBottom="40dp"
-        android:text="check "
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/plate"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="228dp"
+        android:text="TextView"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ques" />
+        app:layout_constraintStart_toEndOf="@+id/ques1"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton5" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="127dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="163dp"
+        android:onClick="button4Click"
+        app:layout_constraintBottom_toTopOf="@+id/resultTest"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButton5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/number4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
