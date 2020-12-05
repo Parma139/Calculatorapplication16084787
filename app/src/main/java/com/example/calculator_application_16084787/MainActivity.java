@@ -13,7 +13,7 @@ import java.util.Random;
 
 
 
-public class MainActivity<numb1, numb2> extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,44 +50,28 @@ public class MainActivity<numb1, numb2> extends AppCompatActivity {
         ImageView apple10 = (ImageView) findViewById(R.id.apple10);
         apple10.setOnTouchListener(handleTouch);
 
+        displayQ();
 
-
-
-        // code for number
-
-        Random r1 = new Random();
-        int numb1 = r1.nextInt(4);
-
-        Random r2 = new Random();
-        int numb2 = r2.nextInt(4);
-
-        String symbol1 = "+";
-        String symbol2 = "=";
-
-
-        TextView myTextView;
-
-
-          myTextView = (TextView)findViewById(R.id.ques1);
-          myTextView.setText( String.valueOf(numb1) );
-
-         myTextView = (TextView)findViewById(R.id.symbol1);
-         myTextView.setText(symbol1);
-
-          myTextView = (TextView)findViewById(R.id.ques2);
-        myTextView.setText( String.valueOf(numb2) );
-
-
-         myTextView = (TextView)findViewById(R.id.symbol2);
-        myTextView.setText( symbol2 );
-
-        // code for ques1 and ques2
     }
+    //code for ques
+    TextView myTextView;
 
+    Random r1 = new Random();
+    int numb1 = r1.nextInt(4);
+
+    Random r2 = new Random();
+    int numb2 = r2.nextInt(4);
+
+
+    public void displayQ(){
+        myTextView = (TextView) findViewById(R.id.ques);
+        myTextView.setText(String.valueOf(numb1 + " + " + (numb2) + " = " ));
+    }
+    //end code for ques
 
 //code for button
     int button0, button1, button2, button3, button4, button5, button6, button7, button8, button9;
-    TextView myTextView;
+ //   TextView myTextView;
 
     public void button0Click(View v) {
         TextView output = findViewById(R.id.resultTest);
@@ -158,9 +142,6 @@ public class MainActivity<numb1, numb2> extends AppCompatActivity {
         button9 = 9;
         display();
     }
-
-
-
     //end code for button
 
     //function that check answer is right or wrong
@@ -170,30 +151,16 @@ public class MainActivity<numb1, numb2> extends AppCompatActivity {
         String checkS;
         int checkI;
 
-        String checkq1S;
-        int checkq1I;
-
-        String checkq2S;
-        int checkq2I;
-
         int result = 0;
         TextView outes = findViewById(R.id.resultTest);
         checkS = outes.getText().toString();
         checkI = Integer.parseInt(checkS);
 
-        TextView outq1 = findViewById(R.id.ques1);
-        checkq1S = outq1.getText().toString();
-        checkq1I = Integer.parseInt(checkq1S);
-
-
-        TextView outq2 = findViewById(R.id.ques2);
-        checkq2S = outq2.getText().toString();
-        checkq2I = Integer.parseInt(checkq2S);
-
-        result = checkq1I + checkq2I;
+       result = numb1 + numb2;
 
         if (checkI == result){
             Toast.makeText(this, "This is correct answer",Toast.LENGTH_SHORT).show();
+            
         }else
         {
             Toast.makeText(this, "This is wrong answer",Toast.LENGTH_SHORT).show();

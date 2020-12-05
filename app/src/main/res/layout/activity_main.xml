@@ -183,9 +183,8 @@
 
     <TextView
         android:id="@+id/resultTest"
-        android:layout_width="81dp"
-        android:layout_height="74dp"
-        android:layout_marginTop="2dp"
+        android:layout_width="88dp"
+        android:layout_height="67dp"
         android:adjustViewBounds="true"
         android:background="#379F9697"
         android:contentDescription="@string/resultTest"
@@ -194,13 +193,13 @@
         android:text="?"
         android:textColor="#090909"
         android:textSize="50sp"
-        app:layout_constraintStart_toEndOf="@+id/symbol2"
-        app:layout_constraintTop_toBottomOf="@+id/Button9" />
+        app:layout_constraintStart_toEndOf="@+id/ques"
+        app:layout_constraintTop_toBottomOf="@+id/Button8" />
 
     <TextView
-        android:id="@+id/ques1"
-        android:layout_width="83dp"
-        android:layout_height="76dp"
+        android:id="@+id/ques"
+        android:layout_width="317dp"
+        android:layout_height="72dp"
         android:layout_marginStart="1dp"
         android:layout_marginTop="1dp"
         android:adjustViewBounds="true"
@@ -213,22 +212,6 @@
         android:textSize="50sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Button5" />
-
-    <TextView
-        android:id="@+id/ques2"
-        android:layout_width="84dp"
-        android:layout_height="76dp"
-        android:layout_marginTop="1dp"
-        android:adjustViewBounds="true"
-        android:background="#379F9697"
-        android:contentDescription="@string/ques2"
-        android:padding="0dp"
-        android:scaleType="fitCenter"
-        android:text="@string/ques2"
-        android:textColor="#090909"
-        android:textSize="50sp"
-        app:layout_constraintStart_toEndOf="@+id/symbol1"
-        app:layout_constraintTop_toBottomOf="@+id/Button7" />
 
     <ImageButton
         android:id="@+id/Button0"
@@ -362,16 +345,16 @@
         android:id="@+id/Button8"
         android:layout_width="79dp"
         android:layout_height="82dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="1dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="1dp"
         android:adjustViewBounds="true"
         android:background="#379F9697"
         android:contentDescription="@string/Button8"
         android:onClick="button8Click"
         android:padding="0dp"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/ques2"
-        app:layout_constraintEnd_toStartOf="@+id/Button4"
+        app:layout_constraintStart_toEndOf="@+id/Button7"
+        app:layout_constraintTop_toBottomOf="@+id/Button4"
         app:srcCompat="@drawable/number8" />
 
     <ImageButton
@@ -388,33 +371,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Button4"
         app:srcCompat="@drawable/number9" />
-
-    <TextView
-        android:id="@+id/symbol1"
-        android:layout_width="95dp"
-        android:layout_height="75dp"
-        android:adjustViewBounds="true"
-        android:background="#379F9697"
-        android:contentDescription="@string/symbol1"
-        android:padding="0dp"
-        android:scaleType="fitCenter"
-        android:text="@string/symbol1"
-        android:textColor="#090909"
-        android:textSize="50sp"
-        app:layout_constraintStart_toEndOf="@+id/ques1"
-        app:layout_constraintTop_toBottomOf="@+id/Button6" />
-
-    <TextView
-        android:id="@+id/symbol2"
-        android:layout_width="67dp"
-        android:layout_height="76dp"
-        android:layout_marginTop="1dp"
-        android:background="#379F9697"
-        android:contentDescription="@string/symbol2"
-        android:text="@string/symbol2"
-        android:textColor="#090909"
-        android:textSize="50sp"
-        app:layout_constraintStart_toEndOf="@+id/ques2"
-        app:layout_constraintTop_toBottomOf="@+id/Button8" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
