@@ -7,10 +7,8 @@ import android.view.View;        //for View
 import android.widget.ImageView; // for linking the ImageView object
 import android.view.MotionEvent; //for touch and drag event
 import android.widget.TextView;
-import android.widget.Toast;
+
 import java.util.Random;
-
-
 
 
 public class MainActivity extends AppCompatActivity {
@@ -19,6 +17,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+//image rotatiion
+        hideStar();
+
+
+        // image rotation
+
 
         ImageView apple1 = (ImageView) findViewById(R.id.apple1);
         apple1.setOnTouchListener(handleTouch);
@@ -50,11 +55,16 @@ public class MainActivity extends AppCompatActivity {
         ImageView apple10 = (ImageView) findViewById(R.id.apple10);
         apple10.setOnTouchListener(handleTouch);
 
+
         displayQ();
 
+
+
     }
-    //code for ques
+    //code for ques nad resutl output
     TextView myTextView;
+
+
 
     Random r1 = new Random();
     int numb1 = r1.nextInt(4);
@@ -62,11 +72,50 @@ public class MainActivity extends AppCompatActivity {
     Random r2 = new Random();
     int numb2 = r2.nextInt(4);
 
-
     public void displayQ(){
+        numb1 = r1.nextInt(4);
+        numb2 = r2.nextInt(4);
+
         myTextView = (TextView) findViewById(R.id.ques);
         myTextView.setText(String.valueOf(numb1 + " + " + (numb2) + " = " ));
+
+        myTextView = (TextView) findViewById(R.id.resultTest);
+        myTextView.setText(String.valueOf("?"));
     }
+
+
+    //code ned for ques and result
+
+
+   public void hideStar() {
+        View starView;
+        View starView1;
+        View starView2;
+        starView = (View) findViewById(R.id.star);
+        starView.setVisibility(View.INVISIBLE);
+       starView1 = (View) findViewById(R.id.star1);
+       starView1.setVisibility(View.INVISIBLE);
+       starView2 = (View) findViewById(R.id.playAgain);
+       starView2.setVisibility(View.INVISIBLE);
+
+        }
+
+    public void showStar() {
+        View starView;
+        View starView1;
+        View starView2;
+
+        starView = (View) findViewById(R.id.star);
+        starView.setVisibility(View.VISIBLE);
+        starView1 = (View) findViewById(R.id.star1);
+        starView1.setVisibility(View.VISIBLE);
+        starView2 = (View) findViewById(R.id.playAgain);
+        starView2.setVisibility(View.VISIBLE);
+    }
+
+
+
+
     //end code for ques
 
 //code for button
@@ -142,7 +191,14 @@ public class MainActivity extends AppCompatActivity {
         button9 = 9;
         display();
     }
+
+    public void playAgain(View v) {
+
+        hideStar();
+        displayQ();
+    }
     //end code for button
+
 
     //function that check answer is right or wrong
 
@@ -159,12 +215,16 @@ public class MainActivity extends AppCompatActivity {
        result = numb1 + numb2;
 
         if (checkI == result){
-            Toast.makeText(this, "This is correct answer",Toast.LENGTH_SHORT).show();
-            
-        }else
-        {
-            Toast.makeText(this, "This is wrong answer",Toast.LENGTH_SHORT).show();
-        }
+              showStar();
+            // myTextView = (TextView) findViewById(R.id.viewButton);
+             //myTextView.setVisibility(View.VISIBLE);
+
+              }
+        else{
+            TextView output = findViewById(R.id.resultTest);
+            output.setText("?");
+
+             }
 
     }
     // end function that check answer is right or wrong

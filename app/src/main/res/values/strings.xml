@@ -17,4 +17,6 @@
     <string name="addsymbol" />
     <string name="symbol1">symbol1</string>
     <string name="symbol2">symbol2</string>
+    <string name="star" />
+    <string name="playAgain" />
 </resources>

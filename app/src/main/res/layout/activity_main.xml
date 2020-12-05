@@ -190,7 +190,6 @@
         android:contentDescription="@string/resultTest"
         android:padding="0dp"
         android:scaleType="fitCenter"
-        android:text="?"
         android:textColor="#090909"
         android:textSize="50sp"
         app:layout_constraintStart_toEndOf="@+id/ques"
@@ -371,5 +370,39 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Button4"
         app:srcCompat="@drawable/number9" />
+
+    <ImageView
+        android:id="@+id/star"
+        android:layout_width="198dp"
+        android:layout_height="125dp"
+        android:adjustViewBounds="true"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/playAgain"
+        app:layout_constraintEnd_toStartOf="@+id/playAgain"
+        app:layout_constraintTop_toBottomOf="@+id/ques"
+        app:srcCompat="@drawable/star_kids" />
+
+    <ImageView
+        android:id="@+id/star1"
+        android:layout_width="167dp"
+        android:layout_height="127dp"
+        android:adjustViewBounds="true"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/plate"
+        app:layout_constraintTop_toBottomOf="@+id/resultTest"
+        app:srcCompat="@drawable/star_kids"
+        tools:layout_editor_absoluteX="245dp" />
+
+    <ImageButton
+        android:id="@+id/playAgain"
+        android:layout_width="152dp"
+        android:layout_height="121dp"
+        android:onClick="playAgain"
+        app:layout_constraintBottom_toTopOf="@+id/plate"
+        app:layout_constraintEnd_toEndOf="@+id/apple10"
+        app:layout_constraintTop_toTopOf="@+id/star1"
+        app:srcCompat="@drawable/play_again" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
