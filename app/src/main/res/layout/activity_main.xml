@@ -181,59 +181,26 @@
         app:layout_constraintVertical_bias="0.47000003"
         app:srcCompat="@drawable/apple" />
 
-    <TextView
-        android:id="@+id/resultTest"
-        android:layout_width="88dp"
-        android:layout_height="67dp"
-        android:adjustViewBounds="true"
-        android:background="#379F9697"
-        android:contentDescription="@string/resultTest"
-        android:padding="0dp"
-        android:scaleType="fitCenter"
-        android:textColor="#090909"
-        android:textSize="50sp"
-        app:layout_constraintStart_toEndOf="@+id/ques"
-        app:layout_constraintTop_toBottomOf="@+id/Button8" />
-
-    <TextView
-        android:id="@+id/ques"
-        android:layout_width="317dp"
-        android:layout_height="72dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="1dp"
-        android:adjustViewBounds="true"
-        android:background="#379F9697"
-        android:contentDescription="@string/ques1"
-        android:padding="0dp"
-        android:scaleType="fitCenter"
-        android:text="@string/ques1"
-        android:textColor="#090909"
-        android:textSize="50sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Button5" />
-
     <ImageButton
         android:id="@+id/Button0"
         android:layout_width="81dp"
-        android:layout_height="80dp"
+        android:layout_height="100dp"
         android:layout_marginStart="2dp"
-        android:layout_marginBottom="1dp"
         android:adjustViewBounds="true"
         android:background="#379F9697"
         android:contentDescription="@string/Button0"
         android:onClick="button0Click"
         android:padding="0dp"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/Button5"
-        app:layout_constraintEnd_toStartOf="@+id/Button1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/number0" />
 
     <ImageButton
         android:id="@+id/Button1"
-        android:layout_width="84dp"
-        android:layout_height="78dp"
+        android:layout_width="81dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="1dp"
         android:adjustViewBounds="true"
         android:background="#379F9697"
         android:contentDescription="@string/Button1"
@@ -247,8 +214,7 @@
     <ImageButton
         android:id="@+id/Button2"
         android:layout_width="81dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="1dp"
+        android:layout_height="100dp"
         android:layout_marginTop="1dp"
         android:adjustViewBounds="true"
         android:background="#379F9697"
@@ -256,96 +222,86 @@
         android:onClick="button2Click"
         android:padding="0dp"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/Button7"
-        app:layout_constraintEnd_toStartOf="@+id/Button3"
         app:layout_constraintStart_toEndOf="@+id/Button1"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/number2" />
 
     <ImageButton
         android:id="@+id/Button3"
-        android:layout_width="87dp"
-        android:layout_height="77dp"
+        android:layout_width="81dp"
+        android:layout_height="100dp"
         android:layout_marginTop="1dp"
-        android:layout_marginEnd="1dp"
         android:adjustViewBounds="true"
         android:background="#379F9697"
         android:contentDescription="@string/Button3"
         android:onClick="button3Click"
         android:padding="0dp"
         android:scaleType="fitCenter"
-        app:layout_constraintEnd_toStartOf="@+id/Button4"
+        app:layout_constraintStart_toEndOf="@+id/Button2"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/number3" />
 
     <ImageButton
         android:id="@+id/Button4"
-        android:layout_width="89dp"
-        android:layout_height="82dp"
+        android:layout_width="85dp"
+        android:layout_height="100dp"
         android:adjustViewBounds="true"
         android:background="#379F9697"
         android:contentDescription="@string/Button4"
         android:onClick="button4Click"
         android:padding="0dp"
         android:scaleType="fitCenter"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Button3"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/number4" />
 
     <ImageButton
         android:id="@+id/Button5"
         android:layout_width="81dp"
-        android:layout_height="80dp"
+        android:layout_height="103dp"
         android:layout_marginStart="2dp"
-        android:layout_marginTop="1dp"
         android:adjustViewBounds="true"
         android:background="#379F9697"
         android:contentDescription="@string/Button5"
         android:onClick="button5Click"
         android:padding="0dp"
         android:scaleType="fitCenter"
-        app:layout_constraintEnd_toStartOf="@+id/Button6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Button0"
         app:srcCompat="@drawable/number5" />
 
     <ImageButton
         android:id="@+id/Button6"
-        android:layout_width="84dp"
-        android:layout_height="82dp"
-        android:layout_marginStart="1dp"
+        android:layout_width="81dp"
+        android:layout_height="100dp"
         android:adjustViewBounds="true"
         android:background="#379F9697"
         android:contentDescription="@string/Button6"
         android:onClick="button6Click"
         android:padding="0dp"
         android:scaleType="fitCenter"
-        app:layout_constraintStart_toEndOf="@+id/Button0"
+        app:layout_constraintStart_toEndOf="@+id/Button5"
         app:layout_constraintTop_toBottomOf="@+id/Button1"
         app:srcCompat="@drawable/number6" />
 
     <ImageButton
         android:id="@+id/Button7"
         android:layout_width="81dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="1dp"
+        android:layout_height="100dp"
         android:adjustViewBounds="true"
         android:background="#379F9697"
         android:contentDescription="@string/Button7"
         android:onClick="button7Click"
         android:padding="0dp"
         android:scaleType="fitCenter"
-        app:layout_constraintEnd_toStartOf="@+id/Button8"
         app:layout_constraintStart_toEndOf="@+id/Button6"
         app:layout_constraintTop_toBottomOf="@+id/Button2"
         app:srcCompat="@drawable/number7" />
 
     <ImageButton
         android:id="@+id/Button8"
-        android:layout_width="79dp"
-        android:layout_height="82dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="1dp"
+        android:layout_width="81dp"
+        android:layout_height="100dp"
         android:adjustViewBounds="true"
         android:background="#379F9697"
         android:contentDescription="@string/Button8"
@@ -353,56 +309,115 @@
         android:padding="0dp"
         android:scaleType="fitCenter"
         app:layout_constraintStart_toEndOf="@+id/Button7"
-        app:layout_constraintTop_toBottomOf="@+id/Button4"
+        app:layout_constraintTop_toBottomOf="@+id/Button3"
         app:srcCompat="@drawable/number8" />
 
     <ImageButton
         android:id="@+id/Button9"
-        android:layout_width="89dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="1dp"
+        android:layout_width="85dp"
+        android:layout_height="100dp"
         android:adjustViewBounds="true"
         android:background="#379F9697"
         android:contentDescription="@string/Button9"
         android:onClick="button9Click"
         android:padding="0dp"
         android:scaleType="fitCenter"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Button8"
         app:layout_constraintTop_toBottomOf="@+id/Button4"
         app:srcCompat="@drawable/number9" />
 
+    <TextView
+        android:id="@+id/ques"
+        android:layout_width="314dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="2dp"
+        android:adjustViewBounds="true"
+        android:background="#379F9697"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        android:textColor="#090909"
+        android:textSize="60sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Button6" />
+
+    <TextView
+        android:id="@+id/resultTest"
+        android:layout_width="96dp"
+        android:layout_height="69dp"
+        android:adjustViewBounds="true"
+        android:background="#379F9697"
+        android:contentDescription="@string/resultTest"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        android:textColor="#090909"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Button9" />
+
     <ImageView
         android:id="@+id/star"
-        android:layout_width="198dp"
-        android:layout_height="125dp"
+        android:layout_width="183dp"
+        android:layout_height="114dp"
         android:adjustViewBounds="true"
         android:padding="0dp"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="@+id/playAgain"
-        app:layout_constraintEnd_toStartOf="@+id/playAgain"
-        app:layout_constraintTop_toBottomOf="@+id/ques"
+        app:layout_constraintEnd_toEndOf="@+id/star2"
+        app:layout_constraintTop_toTopOf="@+id/star1"
         app:srcCompat="@drawable/star_kids" />
 
     <ImageView
         android:id="@+id/star1"
-        android:layout_width="167dp"
+        android:layout_width="203dp"
+        android:layout_height="116dp"
+        android:layout_marginTop="48dp"
+        android:adjustViewBounds="true"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="@+id/star3"
+        app:layout_constraintTop_toBottomOf="@+id/resultTest"
+        app:srcCompat="@drawable/star_kids" />
+
+    <ImageView
+        android:id="@+id/star2"
+        android:layout_width="195dp"
         android:layout_height="127dp"
         android:adjustViewBounds="true"
         android:padding="0dp"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/plate"
-        app:layout_constraintTop_toBottomOf="@+id/resultTest"
-        app:srcCompat="@drawable/star_kids"
-        tools:layout_editor_absoluteX="245dp" />
+        app:layout_constraintEnd_toStartOf="@+id/star3"
+        app:layout_constraintTop_toBottomOf="@+id/star1"
+        app:srcCompat="@drawable/star_kids" />
+
+    <ImageView
+        android:id="@+id/star3"
+        android:layout_width="195dp"
+        android:layout_height="135dp"
+        android:adjustViewBounds="true"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/playAgain"
+        app:layout_constraintEnd_toEndOf="@+id/resultTest"
+        app:srcCompat="@drawable/star_kids" />
 
     <ImageButton
         android:id="@+id/playAgain"
         android:layout_width="152dp"
         android:layout_height="121dp"
+        android:layout_marginTop="128dp"
         android:onClick="playAgain"
-        app:layout_constraintBottom_toTopOf="@+id/plate"
-        app:layout_constraintEnd_toEndOf="@+id/apple10"
-        app:layout_constraintTop_toTopOf="@+id/star1"
+        app:layout_constraintStart_toStartOf="@+id/apple6"
+        app:layout_constraintTop_toBottomOf="@+id/ques"
         app:srcCompat="@drawable/play_again" />
+
+    <TextView
+        android:id="@+id/showF"
+        android:layout_width="311dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="32dp"
+        android:adjustViewBounds="true"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="@+id/Button8"
+        app:layout_constraintTop_toBottomOf="@+id/ques" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
