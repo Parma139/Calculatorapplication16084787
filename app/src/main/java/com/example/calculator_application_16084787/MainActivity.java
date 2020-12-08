@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //code for ques nad resutl output
-        MediaPlayer music;
+        MediaPlayer musicP, musicR, musicW;
 
         TextView myTextView;
         int result;
@@ -179,19 +179,24 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void playRans (){
-        music = MediaPlayer.create(this, R.raw.rightanswer);
-        music.start();
+        musicR = MediaPlayer.create(this, R.raw.rightanswer);
+        musicR.start();
     }
 
     public void playWans (){
-        music = MediaPlayer.create(this, R.raw.wronganswer);
-        music.start();
+        musicW = MediaPlayer.create(this, R.raw.wronganswer);
+        musicW.start();
     }
 
-    public void playaAgainbutton (){
-        music = MediaPlayer.create(this, R.raw.playagainbutton);
-        music.start();
+    public void playaAgainmusic (){
+        musicP = MediaPlayer.create(this, R.raw.playagainbutton);
+        musicP.start();
     }
+
+    public void stopMusic(){
+        musicR.stop();
+    }
+
 
 
     int button0, button1, button2, button3, button4, button5, button6, button7, button8, button9;
@@ -267,7 +272,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void playAgain(View v) {
-        playaAgainbutton();
+        playaAgainmusic();
+        stopMusic();
         stopRotation();
         hideStar();
         displayQ();
