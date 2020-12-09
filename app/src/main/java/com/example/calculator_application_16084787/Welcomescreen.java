@@ -15,7 +15,7 @@ public class Welcomescreen extends AppCompatActivity {
         Thread thread = new Thread(){
             public void run(){
                 try{
-                    sleep(3000);
+                    sleep(5000);
                 }
                 catch(Exception e){
                         e.printStackTrace();
@@ -23,6 +23,7 @@ public class Welcomescreen extends AppCompatActivity {
                 finally {
                     Intent intent = new Intent (Welcomescreen.this, MainActivity.class);
                     startActivity(intent);
+                    finish();
                 }
 
             }

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".MainActivity">
 
     <ImageView
@@ -181,13 +182,20 @@
         app:layout_constraintVertical_bias="0.47000003"
         app:srcCompat="@drawable/apple" />
 
+    <TextView
+        android:id="@+id/bgbutton"
+        android:layout_width="416dp"
+        android:layout_height="275dp"
+        android:background="#374C4344"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageButton
         android:id="@+id/Button0"
         android:layout_width="81dp"
         android:layout_height="100dp"
         android:layout_marginStart="2dp"
         android:adjustViewBounds="true"
-        android:background="#379F9697"
         android:contentDescription="@string/Button0"
         android:onClick="button0Click"
         android:padding="0dp"
@@ -202,7 +210,6 @@
         android:layout_height="100dp"
         android:layout_marginTop="1dp"
         android:adjustViewBounds="true"
-        android:background="#379F9697"
         android:contentDescription="@string/Button1"
         android:onClick="button1Click"
         android:padding="0dp"
@@ -217,7 +224,6 @@
         android:layout_height="100dp"
         android:layout_marginTop="1dp"
         android:adjustViewBounds="true"
-        android:background="#379F9697"
         android:contentDescription="@string/Button2"
         android:onClick="button2Click"
         android:padding="0dp"
@@ -232,7 +238,6 @@
         android:layout_height="100dp"
         android:layout_marginTop="1dp"
         android:adjustViewBounds="true"
-        android:background="#379F9697"
         android:contentDescription="@string/Button3"
         android:onClick="button3Click"
         android:padding="0dp"
@@ -246,7 +251,6 @@
         android:layout_width="85dp"
         android:layout_height="100dp"
         android:adjustViewBounds="true"
-        android:background="#379F9697"
         android:contentDescription="@string/Button4"
         android:onClick="button4Click"
         android:padding="0dp"
@@ -257,11 +261,10 @@
 
     <ImageButton
         android:id="@+id/Button5"
-        android:layout_width="81dp"
-        android:layout_height="103dp"
+        android:layout_width="76dp"
+        android:layout_height="102dp"
         android:layout_marginStart="2dp"
         android:adjustViewBounds="true"
-        android:background="#379F9697"
         android:contentDescription="@string/Button5"
         android:onClick="button5Click"
         android:padding="0dp"
@@ -275,7 +278,6 @@
         android:layout_width="81dp"
         android:layout_height="100dp"
         android:adjustViewBounds="true"
-        android:background="#379F9697"
         android:contentDescription="@string/Button6"
         android:onClick="button6Click"
         android:padding="0dp"
@@ -289,7 +291,6 @@
         android:layout_width="81dp"
         android:layout_height="100dp"
         android:adjustViewBounds="true"
-        android:background="#379F9697"
         android:contentDescription="@string/Button7"
         android:onClick="button7Click"
         android:padding="0dp"
@@ -303,7 +304,6 @@
         android:layout_width="81dp"
         android:layout_height="100dp"
         android:adjustViewBounds="true"
-        android:background="#379F9697"
         android:contentDescription="@string/Button8"
         android:onClick="button8Click"
         android:padding="0dp"
@@ -317,7 +317,6 @@
         android:layout_width="85dp"
         android:layout_height="100dp"
         android:adjustViewBounds="true"
-        android:background="#379F9697"
         android:contentDescription="@string/Button9"
         android:onClick="button9Click"
         android:padding="0dp"
@@ -332,7 +331,6 @@
         android:layout_height="69dp"
         android:layout_marginStart="2dp"
         android:adjustViewBounds="true"
-        android:background="#379F9697"
         android:padding="0dp"
         android:scaleType="fitCenter"
         android:textColor="#090909"
@@ -345,7 +343,6 @@
         android:layout_width="96dp"
         android:layout_height="69dp"
         android:adjustViewBounds="true"
-        android:background="#379F9697"
         android:contentDescription="@string/resultTest"
         android:padding="0dp"
         android:scaleType="fitCenter"
@@ -354,70 +351,96 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Button9" />
 
+    <TextView
+        android:id="@+id/bgChange"
+        android:layout_width="413dp"
+        android:layout_height="728dp"
+        android:background="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Button2" />
+
     <ImageView
         android:id="@+id/star"
-        android:layout_width="183dp"
-        android:layout_height="114dp"
+        android:layout_width="191dp"
+        android:layout_height="200dp"
         android:adjustViewBounds="true"
-        android:padding="0dp"
+        android:padding="10dp"
         android:scaleType="fitCenter"
-        app:layout_constraintEnd_toEndOf="@+id/star2"
-        app:layout_constraintTop_toTopOf="@+id/star1"
-        app:srcCompat="@drawable/star_kids" />
-
-    <ImageView
-        android:id="@+id/star1"
-        android:layout_width="203dp"
-        android:layout_height="116dp"
-        android:layout_marginTop="48dp"
-        android:adjustViewBounds="true"
-        android:padding="0dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintEnd_toEndOf="@+id/star3"
-        app:layout_constraintTop_toBottomOf="@+id/resultTest"
-        app:srcCompat="@drawable/star_kids" />
-
-    <ImageView
-        android:id="@+id/star2"
-        android:layout_width="195dp"
-        android:layout_height="127dp"
-        android:adjustViewBounds="true"
-        android:padding="0dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintEnd_toStartOf="@+id/star3"
-        app:layout_constraintTop_toBottomOf="@+id/star1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/star_kids" />
 
     <ImageView
         android:id="@+id/star3"
-        android:layout_width="195dp"
-        android:layout_height="135dp"
+        android:layout_width="164dp"
+        android:layout_height="242dp"
         android:adjustViewBounds="true"
-        android:padding="0dp"
+        android:padding="20dp"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="@+id/playAgain"
-        app:layout_constraintEnd_toEndOf="@+id/resultTest"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/star_kids" />
+
+    <ImageView
+        android:id="@+id/img3"
+        android:layout_width="201dp"
+        android:layout_height="245dp"
+        android:adjustViewBounds="true"
+        android:padding="20dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/emoji1" />
+
+    <ImageView
+        android:id="@+id/img2"
+        android:layout_width="197dp"
+        android:layout_height="205dp"
+        android:adjustViewBounds="true"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/emoji1" />
 
     <ImageButton
         android:id="@+id/playAgain"
-        android:layout_width="152dp"
-        android:layout_height="121dp"
-        android:layout_marginTop="128dp"
+        android:layout_width="161dp"
+        android:layout_height="123dp"
+        android:adjustViewBounds="true"
+        android:background="#00FFFFFF"
         android:onClick="playAgain"
-        app:layout_constraintStart_toStartOf="@+id/apple6"
-        app:layout_constraintTop_toBottomOf="@+id/ques"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/plate"
+        app:layout_constraintEnd_toEndOf="@+id/apple4"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="@+id/apple2"
+        app:layout_constraintTop_toBottomOf="@+id/resultTest"
+        app:layout_constraintVertical_bias="0.19999999"
         app:srcCompat="@drawable/play_again" />
 
     <TextView
         android:id="@+id/showF"
         android:layout_width="311dp"
         android:layout_height="57dp"
-        android:layout_marginTop="32dp"
         android:adjustViewBounds="true"
         android:padding="0dp"
         android:scaleType="fitCenter"
-        app:layout_constraintEnd_toEndOf="@+id/Button8"
-        app:layout_constraintTop_toBottomOf="@+id/ques" />
+        android:textColor="#6CBA5A"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="@+id/plate"
+        app:layout_constraintTop_toBottomOf="@+id/Button7" />
+
+    <ImageView
+        android:id="@+id/updir"
+        android:layout_width="103dp"
+        android:layout_height="112dp"
+        android:adjustViewBounds="true"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="@+id/apple3"
+        app:layout_constraintTop_toBottomOf="@+id/playAgain"
+        app:srcCompat="@drawable/updir" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
