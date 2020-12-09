@@ -85,7 +85,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    //code ned for ques and result
 
        View starView;
        View starView1;
@@ -142,7 +141,7 @@ public class MainActivity extends AppCompatActivity {
         ImageView star3;
 
 
-    public void rotateStar(){
+    public void movingimStart(){
 
         ScaleAnimation scale;
         TranslateAnimation trans;
@@ -177,7 +176,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void stopRotation(){
+    public void movingimStop(){
         star = (ImageView) findViewById(R.id.star);
         star.clearAnimation();
         star1 = (ImageView) findViewById(R.id.img2);
@@ -284,10 +283,67 @@ public class MainActivity extends AppCompatActivity {
 
     public void playAgain(View v) {
         playaAgainmusic();
+        showbutton();
         stopMusic();
-        stopRotation();
+        movingimStop();
         hideStar();
         displayQ();
+    }
+
+    public void hidebutton(){
+        playAgain = (View) findViewById(R.id.Button0);
+        playAgain.setVisibility(View.INVISIBLE);
+        playAgain = (View) findViewById(R.id.Button1);
+        playAgain.setVisibility(View.INVISIBLE);
+        playAgain = (View) findViewById(R.id.Button2);
+        playAgain.setVisibility(View.INVISIBLE);
+        playAgain = (View) findViewById(R.id.Button3);
+        playAgain.setVisibility(View.INVISIBLE);
+        playAgain = (View) findViewById(R.id.Button4);
+        playAgain.setVisibility(View.INVISIBLE);
+        playAgain = (View) findViewById(R.id.Button5);
+        playAgain.setVisibility(View.INVISIBLE);
+        playAgain = (View) findViewById(R.id.Button6);
+        playAgain.setVisibility(View.INVISIBLE);
+        playAgain = (View) findViewById(R.id.Button7);
+        playAgain.setVisibility(View.INVISIBLE);
+        playAgain = (View) findViewById(R.id.Button8);
+        playAgain.setVisibility(View.INVISIBLE);
+        playAgain = (View) findViewById(R.id.Button9);
+        playAgain.setVisibility(View.INVISIBLE);
+        playAgain = (View) findViewById(R.id.ques);
+        playAgain.setVisibility(View.INVISIBLE);
+        playAgain = (View) findViewById(R.id.resultTest);
+        playAgain.setVisibility(View.INVISIBLE);
+
+    }
+
+    public void showbutton(){
+        playAgain = (View) findViewById(R.id.Button0);
+        playAgain.setVisibility(View.VISIBLE);
+        playAgain = (View) findViewById(R.id.Button1);
+        playAgain.setVisibility(View.VISIBLE);
+        playAgain = (View) findViewById(R.id.Button2);
+        playAgain.setVisibility(View.VISIBLE);
+        playAgain = (View) findViewById(R.id.Button3);
+        playAgain.setVisibility(View.VISIBLE);
+        playAgain = (View) findViewById(R.id.Button4);
+        playAgain.setVisibility(View.VISIBLE);
+        playAgain = (View) findViewById(R.id.Button5);
+        playAgain.setVisibility(View.VISIBLE);
+        playAgain = (View) findViewById(R.id.Button6);
+        playAgain.setVisibility(View.VISIBLE);
+        playAgain = (View) findViewById(R.id.Button7);
+        playAgain.setVisibility(View.VISIBLE);
+        playAgain = (View) findViewById(R.id.Button8);
+        playAgain.setVisibility(View.VISIBLE);
+        playAgain = (View) findViewById(R.id.Button9);
+        playAgain.setVisibility(View.VISIBLE);
+        playAgain = (View) findViewById(R.id.ques);
+        playAgain.setVisibility(View.VISIBLE);
+        playAgain = (View) findViewById(R.id.resultTest);
+        playAgain.setVisibility(View.VISIBLE);
+
     }
 
 
@@ -305,9 +361,9 @@ public class MainActivity extends AppCompatActivity {
           if (checkI == result){
             myTextView = (TextView) findViewById(R.id.showF);
             myTextView.setText(String.valueOf("    "+ numb1 + " + " + (numb2) + " = "  + (result)));
-
+              hidebutton();
               playRans();
-              rotateStar();
+              movingimStart();
               showStar();
           }
               else{
